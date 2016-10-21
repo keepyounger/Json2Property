@@ -6,7 +6,7 @@ Json to Property (Xcode8 Editor Extension)
 <br/>
 <img  src="demo.gif"  alt="demo.gif" />
 #Download
-<a href ="Json2Property.app"> Json2Property </a> <br/>
+<a href ="https://github.com/keepyounger/Json2Property/blob/master/Json2Property.zip?raw=true"> Json2Property </a> <br/>
 
 # Support
 Xcode 8 or later
