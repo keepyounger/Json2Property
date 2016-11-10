@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B021A12F1DB9BC1F00E70393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A12E1DB9BC1F00E70393 /* AppDelegate.m */; };
+		B021A1321DB9BC1F00E70393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A1311DB9BC1F00E70393 /* main.m */; };
+		B021A1341DB9BC1F00E70393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B021A1331DB9BC1F00E70393 /* Assets.xcassets */; };
+		B021A1371DB9BC1F00E70393 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B021A1351DB9BC1F00E70393 /* MainMenu.xib */; };
+		B021A1451DB9BC7B00E70393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021A1441DB9BC7B00E70393 /* Cocoa.framework */; };
+		B021A14B1DB9BC7B00E70393 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A14A1DB9BC7B00E70393 /* SourceEditorExtension.m */; };
+		B021A14E1DB9BC7C00E70393 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A14D1DB9BC7C00E70393 /* SourceEditorCommand.m */; };
+		B021A1521DB9BC7C00E70393 /* Json2PropertyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B021A1421DB9BC7B00E70393 /* Json2PropertyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B021A15F1DB9BF7900E70393 /* ESClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A1581DB9BF7900E70393 /* ESClassInfo.m */; };
+		B021A1661DB9C44600E70393 /* ESJsonFormatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A1651DB9C44600E70393 /* ESJsonFormatManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B021A1501DB9BC7C00E70393 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B021A1221DB9BC1F00E70393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B021A1411DB9BC7B00E70393;
+			remoteInfo = Json2PropertyExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B021A1561DB9BC7C00E70393 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B021A1521DB9BC7C00E70393 /* Json2PropertyExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B021A12A1DB9BC1F00E70393 /* Json2Property.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Json2Property.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B021A12D1DB9BC1F00E70393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B021A12E1DB9BC1F00E70393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B021A1311DB9BC1F00E70393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B021A1331DB9BC1F00E70393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B021A1361DB9BC1F00E70393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B021A1381DB9BC1F00E70393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B021A1421DB9BC7B00E70393 /* Json2PropertyExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Json2PropertyExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B021A1441DB9BC7B00E70393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B021A1481DB9BC7B00E70393 /* Json2PropertyExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Json2PropertyExtension.entitlements; sourceTree = "<group>"; };
+		B021A1491DB9BC7B00E70393 /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		B021A14A1DB9BC7B00E70393 /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		B021A14C1DB9BC7C00E70393 /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		B021A14D1DB9BC7C00E70393 /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		B021A14F1DB9BC7C00E70393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B021A1571DB9BF7900E70393 /* ESClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESClassInfo.h; sourceTree = "<group>"; };
+		B021A1581DB9BF7900E70393 /* ESClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESClassInfo.m; sourceTree = "<group>"; };
+		B021A1641DB9C44600E70393 /* ESJsonFormatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESJsonFormatManager.h; sourceTree = "<group>"; };
+		B021A1651DB9C44600E70393 /* ESJsonFormatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B021A1271DB9BC1F00E70393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021A13F1DB9BC7B00E70393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021A1451DB9BC7B00E70393 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B021A1211DB9BC1F00E70393 = {
+			isa = PBXGroup;
+			children = (
+				B021A12C1DB9BC1F00E70393 /* Json2Property */,
+				B021A1461DB9BC7B00E70393 /* Json2PropertyExtension */,
+				B021A1431DB9BC7B00E70393 /* Frameworks */,
+				B021A12B1DB9BC1F00E70393 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B021A12B1DB9BC1F00E70393 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B021A12A1DB9BC1F00E70393 /* Json2Property.app */,
+				B021A1421DB9BC7B00E70393 /* Json2PropertyExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B021A12C1DB9BC1F00E70393 /* Json2Property */ = {
+			isa = PBXGroup;
+			children = (
+				B021A12D1DB9BC1F00E70393 /* AppDelegate.h */,
+				B021A12E1DB9BC1F00E70393 /* AppDelegate.m */,
+				B021A1331DB9BC1F00E70393 /* Assets.xcassets */,
+				B021A1351DB9BC1F00E70393 /* MainMenu.xib */,
+				B021A1381DB9BC1F00E70393 /* Info.plist */,
+				B021A1301DB9BC1F00E70393 /* Supporting Files */,
+			);
+			path = Json2Property;
+			sourceTree = "<group>";
+		};
+		B021A1301DB9BC1F00E70393 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B021A1311DB9BC1F00E70393 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B021A1431DB9BC7B00E70393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B021A1441DB9BC7B00E70393 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B021A1461DB9BC7B00E70393 /* Json2PropertyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B021A1631DB9BF7E00E70393 /* Model */,
+				B021A1641DB9C44600E70393 /* ESJsonFormatManager.h */,
+				B021A1651DB9C44600E70393 /* ESJsonFormatManager.m */,
+				B021A1491DB9BC7B00E70393 /* SourceEditorExtension.h */,
+				B021A14A1DB9BC7B00E70393 /* SourceEditorExtension.m */,
+				B021A14C1DB9BC7C00E70393 /* SourceEditorCommand.h */,
+				B021A14D1DB9BC7C00E70393 /* SourceEditorCommand.m */,
+				B021A14F1DB9BC7C00E70393 /* Info.plist */,
+				B021A1471DB9BC7B00E70393 /* Supporting Files */,
+			);
+			path = Json2PropertyExtension;
+			sourceTree = "<group>";
+		};
+		B021A1471DB9BC7B00E70393 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B021A1481DB9BC7B00E70393 /* Json2PropertyExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B021A1631DB9BF7E00E70393 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B021A1571DB9BF7900E70393 /* ESClassInfo.h */,
+				B021A1581DB9BF7900E70393 /* ESClassInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B021A1291DB9BC1F00E70393 /* Json2Property */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B021A13B1DB9BC1F00E70393 /* Build configuration list for PBXNativeTarget "Json2Property" */;
+			buildPhases = (
+				B021A1261DB9BC1F00E70393 /* Sources */,
+				B021A1271DB9BC1F00E70393 /* Frameworks */,
+				B021A1281DB9BC1F00E70393 /* Resources */,
+				B021A1561DB9BC7C00E70393 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B021A1511DB9BC7C00E70393 /* PBXTargetDependency */,
+			);
+			name = Json2Property;
+			productName = Json2Property;
+			productReference = B021A12A1DB9BC1F00E70393 /* Json2Property.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B021A1411DB9BC7B00E70393 /* Json2PropertyExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B021A1531DB9BC7C00E70393 /* Build configuration list for PBXNativeTarget "Json2PropertyExtension" */;
+			buildPhases = (
+				B021A13E1DB9BC7B00E70393 /* Sources */,
+				B021A13F1DB9BC7B00E70393 /* Frameworks */,
+				B021A1401DB9BC7B00E70393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Json2PropertyExtension;
+			productName = Json2PropertyExtension;
+			productReference = B021A1421DB9BC7B00E70393 /* Json2PropertyExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B021A1221DB9BC1F00E70393 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ifang;
+				TargetAttributes = {
+					B021A1291DB9BC1F00E70393 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L7P3DYSB6A;
+						ProvisioningStyle = Automatic;
+					};
+					B021A1411DB9BC7B00E70393 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L7P3DYSB6A;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B021A1251DB9BC1F00E70393 /* Build configuration list for PBXProject "Json2Property" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B021A1211DB9BC1F00E70393;
+			productRefGroup = B021A12B1DB9BC1F00E70393 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B021A1291DB9BC1F00E70393 /* Json2Property */,
+				B021A1411DB9BC7B00E70393 /* Json2PropertyExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B021A1281DB9BC1F00E70393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021A1341DB9BC1F00E70393 /* Assets.xcassets in Resources */,
+				B021A1371DB9BC1F00E70393 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021A1401DB9BC7B00E70393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B021A1261DB9BC1F00E70393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021A1321DB9BC1F00E70393 /* main.m in Sources */,
+				B021A12F1DB9BC1F00E70393 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B021A13E1DB9BC7B00E70393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B021A1661DB9C44600E70393 /* ESJsonFormatManager.m in Sources */,
+				B021A15F1DB9BF7900E70393 /* ESClassInfo.m in Sources */,
+				B021A14B1DB9BC7B00E70393 /* SourceEditorExtension.m in Sources */,
+				B021A14E1DB9BC7C00E70393 /* SourceEditorCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B021A1511DB9BC7C00E70393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B021A1411DB9BC7B00E70393 /* Json2PropertyExtension */;
+			targetProxy = B021A1501DB9BC7C00E70393 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B021A1351DB9BC1F00E70393 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B021A1361DB9BC1F00E70393 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B021A1391DB9BC1F00E70393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B021A13A1DB9BC1F00E70393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B021A13C1DB9BC1F00E70393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				INFOPLIST_FILE = Json2Property/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.Json2Property;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B021A13D1DB9BC1F00E70393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				INFOPLIST_FILE = Json2Property/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.Json2Property;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B021A1541DB9BC7C00E70393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.Json2Property.Json2PropertyExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B021A1551DB9BC7C00E70393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifang.Json2Property.Json2PropertyExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B021A1251DB9BC1F00E70393 /* Build configuration list for PBXProject "Json2Property" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021A1391DB9BC1F00E70393 /* Debug */,
+				B021A13A1DB9BC1F00E70393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B021A13B1DB9BC1F00E70393 /* Build configuration list for PBXNativeTarget "Json2Property" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021A13C1DB9BC1F00E70393 /* Debug */,
+				B021A13D1DB9BC1F00E70393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B021A1531DB9BC7C00E70393 /* Build configuration list for PBXNativeTarget "Json2PropertyExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B021A1541DB9BC7C00E70393 /* Debug */,
+				B021A1551DB9BC7C00E70393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B021A1221DB9BC1F00E70393 /* Project object */;
+}
