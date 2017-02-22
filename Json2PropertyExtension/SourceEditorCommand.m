@@ -10,31 +10,52 @@
 
 #import "SourceEditorCommand.h"
 #import "ESClassInfo.h"
+#import <AppKit/AppKit.h>
 
 @interface SourceEditorCommand ()
 @property (nonatomic, strong) XCSourceTextBuffer *buffer;
+@property (nonatomic, copy) void(^completionHandler)(NSError * _Nullable nilOrError);
 @end
 
 @implementation SourceEditorCommand
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler
 {
+    self.completionHandler = completionHandler;
     self.buffer = invocation.buffer;
-    self.isSwift = [self.buffer.completeBuffer rangeOfString:@".swift"].length!=0;
+    self.isSwift = [self.buffer.contentUTI rangeOfString:@"swift"].length!=0;
     
     XCSourceTextRange *range = self.buffer.selections.firstObject;
     NSString *jsonString = @"";
     for (NSInteger i=range.start.line; i<=range.end.line; i++) {
-        jsonString = [NSString stringWithFormat:@"%@%@",jsonString,self.buffer.lines[i]];
+        if (i<self.buffer.lines.count) {
+            jsonString = [NSString stringWithFormat:@"%@%@",jsonString,self.buffer.lines[i]];
+        }
     }
     
-    id result = [self jsonStringToObject:jsonString];
-    if (result) {
-        ESClassInfo *classInfo = [self dealClassNameWithJsonResult:result];
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    id dicOrArray = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                    options:NSJSONReadingMutableContainers
+                                                      error:&err];
+    if (err) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSAlert *alert = [[NSAlert alloc] init];
+            alert.messageText = err.localizedDescription;
+            [alert addButtonWithTitle:@"OK"];
+            alert.window.level = NSStatusWindowLevel;
+            [alert.window makeKeyAndOrderFront:alert.window];
+            if([alert runModal] == NSAlertFirstButtonReturn) {
+                
+            }
+            self.completionHandler(nil);
+        });
+    } else {
+        ESClassInfo *classInfo = [self dealClassNameWithJsonResult:dicOrArray];
         [self outputResult:classInfo];
+        self.completionHandler(nil);
     }
     
-    completionHandler(nil);
 }
 
 /**
@@ -143,21 +164,6 @@
     XCSourceTextRange *selection = [[XCSourceTextRange alloc] initWithStart:XCSourceTextPositionMake(0, 0) end:XCSourceTextPositionMake(0, 0)];
     [self.buffer.selections removeAllObjects];
     [self.buffer.selections insertObject:selection atIndex:0];
-}
-
-- (id)jsonStringToObject:(NSString*)jsonString
-{
-    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
-    id dicOrArray = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                    options:NSJSONReadingMutableContainers
-                                                      error:&err];
-    if (err) {
-        NSLog(@"%@", err.localizedDescription);
-        return nil;
-    }
-    
-    return dicOrArray;
 }
 
 @end
