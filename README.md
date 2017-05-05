@@ -5,7 +5,7 @@ Json to Property (Xcode8 Editor Extension)
 <br/>
 <br/>
 <img  src="demo.gif"  alt="demo.gif" />
-#Install
+# Install
 (OSX 10.11 only) sudo /usr/libexec/xpccachectl<br/>
 Download, unzip and run <a href ="https://github.com/keepyounger/Json2Property/blob/master/Json2Property.zip?raw=true"> Json2Property </a><br/>
  -> System Preferences... -> Extensions -> All -> Enable Json2Property<br/>
@@ -18,7 +18,7 @@ Xcode -> Preferences... -> Key Bindings (Filter "Json2Pro")<br/>
 你可以用Xcode设置快捷键。<br/>
 Xcode -> Preferences... -> Key Bindings (Filter "Json2Pro")<br/>
 
-#Download
+# Download
 <a href ="https://github.com/keepyounger/Json2Property/blob/master/Json2Property.zip?raw=true"> Json2Property </a> <br/>
 
 # Support
