@@ -215,12 +215,12 @@
 				TargetAttributes = {
 					B021A1291DB9BC1F00E70393 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L7P3DYSB6A;
+						DevelopmentTeam = 8975PEGCVX;
 						ProvisioningStyle = Automatic;
 					};
 					B021A1411DB9BC7B00E70393 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L7P3DYSB6A;
+						DevelopmentTeam = 8975PEGCVX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -399,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = Json2Property/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -414,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = Json2Property/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -429,7 +429,7 @@
 				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -445,7 +445,7 @@
 				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = L7P3DYSB6A;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

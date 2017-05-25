@@ -25,12 +25,16 @@
     self.buffer = invocation.buffer;
     self.isSwift = [self.buffer.contentUTI rangeOfString:@"swift"].length!=0;
     
-    XCSourceTextRange *range = self.buffer.selections.firstObject;
     NSString *jsonString = @"";
-    for (NSInteger i=range.start.line; i<=range.end.line; i++) {
-        if (i<self.buffer.lines.count) {
-            jsonString = [NSString stringWithFormat:@"%@%@",jsonString,self.buffer.lines[i]];
+    if ([invocation.commandIdentifier isEqualToString:@"Json2Property.text"]) {
+        XCSourceTextRange *range = self.buffer.selections.firstObject;
+        for (NSInteger i=range.start.line; i<=range.end.line; i++) {
+            if (i<self.buffer.lines.count) {
+                jsonString = [NSString stringWithFormat:@"%@%@",jsonString,self.buffer.lines[i]];
+            }
         }
+    } else {
+        jsonString = [[NSPasteboard generalPasteboard] stringForType:NSStringPboardType];
     }
     
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
