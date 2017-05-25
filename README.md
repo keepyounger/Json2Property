@@ -21,7 +21,7 @@ Json to Property (Xcode8 Editor Extension)
 * Xcode -> Preferences... -> Key Bindings (Filter "Json2Pro")<br/>
 
 # Update
-###### 1.0 2015.5.25
+###### 1.0 2017.5.25
 * Now you can format a string from the Pasteboard.
 * 现在你可以从剪贴板格式化 json 了，无需拷贝到 xcode 。
 
