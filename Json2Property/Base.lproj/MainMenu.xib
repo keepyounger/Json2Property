@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,6 +15,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="textField" destination="vzF-dF-UEr" id="UhH-EW-ixX"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -82,37 +84,67 @@
         <window title="Json2Property" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="497" height="385"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="contentRect" x="335" y="390" width="516" height="287"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="497" height="385"/>
+                <rect key="frame" x="0.0" y="0.0" width="516" height="287"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-R3-1U3">
-                        <rect key="frame" x="38" y="45" width="421" height="300"/>
+                        <rect key="frame" x="38" y="67" width="440" height="140"/>
                         <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="left" id="lGn-sF-8wD">
                             <font key="font" size="16" name=".PingFangSC-Regular"/>
-                            <mutableString key="title">(OSX 10.11 only) sudo /usr/libexec/xpccachectl
+                            <string key="title">(OSX 10.11 only) sudo /usr/libexec/xpccachectl
  -&gt; System Preferences... -&gt; Extensions -&gt; All -&gt; Enable Json2Property
 You can set a shortcut (Key-Binding) for Json2Property using Xcode.
-Xcode -&gt; Preferences... -&gt; Key Bindings (Filter "Json2Pro")
-
-在OSX 10.11 上 需要先执行Command: sudo /usr/libexec/xpccachectl
- -&gt; 系统偏好设置...-&gt; 扩展-&gt; 全部 -&gt; 勾选Json2Property
-你可以用Xcode设置快捷键。
-Xcode -&gt; Preferences... -&gt; Key Bindings (Filter "Json2Pro")</mutableString>
+Xcode -&gt; Preferences... -&gt; Key Bindings (Filter "Json2Pro")</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Rw-vx-m0A">
+                        <rect key="frame" x="38" y="228" width="95" height="19"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Super Class:" id="1g7-2c-7Pg">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vzF-dF-UEr">
+                        <rect key="frame" x="151" y="226" width="200" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="hxu-L6-IdM"/>
+                        </constraints>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="NSObject" drawsBackground="YES" usesSingleLineMode="YES" id="86J-d6-Oi5">
+                            <font key="font" metaFont="system" size="16"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-D2-yAS">
+                        <rect key="frame" x="403" y="221" width="79" height="32"/>
+                        <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Epx-Le-SKH">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="16"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="doneClick:" target="Voe-Tx-rLC" id="hfa-jW-8mr"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ynu-D2-yAS" secondAttribute="trailing" constant="40" id="BB3-ti-jPy"/>
+                    <constraint firstItem="vzF-dF-UEr" firstAttribute="centerY" secondItem="7Rw-vx-m0A" secondAttribute="centerY" id="FIM-T6-V8x"/>
                     <constraint firstAttribute="trailing" secondItem="3Nz-R3-1U3" secondAttribute="trailing" constant="40" id="NiJ-dC-lye"/>
                     <constraint firstItem="3Nz-R3-1U3" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="40" id="UmK-Dd-hOH"/>
-                    <constraint firstItem="3Nz-R3-1U3" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="40" id="eeq-kJ-ZGn"/>
+                    <constraint firstItem="vzF-dF-UEr" firstAttribute="leading" secondItem="7Rw-vx-m0A" secondAttribute="trailing" constant="20" id="XZY-Na-Xpx"/>
+                    <constraint firstItem="ynu-D2-yAS" firstAttribute="centerY" secondItem="vzF-dF-UEr" secondAttribute="centerY" id="c8t-qg-zS7"/>
+                    <constraint firstItem="3Nz-R3-1U3" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="80" id="eeq-kJ-ZGn"/>
+                    <constraint firstItem="7Rw-vx-m0A" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="40" id="lhw-Iw-yir"/>
+                    <constraint firstItem="7Rw-vx-m0A" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="40" id="z6i-sr-IEE"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="102.5" y="355.5"/>
+            <point key="canvasLocation" x="112" y="306.5"/>
         </window>
     </objects>
 </document>

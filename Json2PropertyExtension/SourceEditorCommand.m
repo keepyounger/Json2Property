@@ -109,7 +109,7 @@
                 }
             }
            
-            NSString *childClassName = @"<#ClassName#>";
+            NSString *childClassName = [key.capitalizedString stringByAppendingString:@"Model"];
             //如果当前obj是 NSDictionary 或者 NSArray，继续向下遍历
             if ([obj isKindOfClass:[NSDictionary class]]) {
                 ESClassInfo *childClassInfo = [[ESClassInfo alloc] initWithClassNameKey:key ClassName:childClassName classDic:obj];

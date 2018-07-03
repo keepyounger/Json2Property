@@ -1,0 +1,57 @@
+
+/* Class = "NSMenuItem"; title = "Json2Property"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Json2Property";
+
+/* Class = "NSTextFieldCell"; title = "Super Class:"; ObjectID = "1g7-2c-7Pg"; */
+"1g7-2c-7Pg.title" = "父类:";
+
+/* Class = "NSMenuItem"; title = "Quit Json2Property"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Json2Property";
+
+/* Class = "NSMenuItem"; title = "About Json2Property"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About Json2Property";
+
+/* Class = "NSTextFieldCell"; title = "NSObject"; ObjectID = "86J-d6-Oi5"; */
+"86J-d6-Oi5.title" = "NSObject";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSButtonCell"; title = "Done"; ObjectID = "Epx-Le-SKH"; */
+"Epx-Le-SKH.title" = "完成";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Json2Property Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Json2Property Help";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Hide Json2Property"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide Json2Property";
+
+/* Class = "NSWindow"; title = "Json2Property"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Json2Property";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSTextFieldCell"; title = "(OSX 10.11 only) sudo /usr/libexec/xpccachectl\n -> System Preferences... -> Extensions -> All -> Enable Json2Property\nYou can set a shortcut (Key-Binding) for Json2Property using Xcode.\nXcode -> Preferences... -> Key Bindings (Filter \"Json2Pro\")\n\n在OSX 10.11 上 需要先执行Command: sudo /usr/libexec/xpccachectl\n -> 系统偏好设置...-> 扩展-> 全部 -> 勾选Json2Property\n你可以用Xcode设置快捷键。\nXcode -> Preferences... -> Key Bindings (Filter \"Json2Pro\")"; ObjectID = "lGn-sF-8wD"; */
+"lGn-sF-8wD.title" = "在OSX 10.11 上 需要先执行Command: sudo /usr/libexec/xpccachectl\n -> 系统偏好设置...-> 扩展-> 全部 -> 勾选Json2Property\n你可以用Xcode设置快捷键。\nXcode -> Preferences... -> Key Bindings (Filter \"Json2Pro\")";
+
+/* Class = "NSMenu"; title = "Json2Property"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Json2Property";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";

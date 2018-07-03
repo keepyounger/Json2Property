@@ -110,37 +110,37 @@
  *  atreturn
  */
 + (NSString *)formatSwiftWithKey:(NSString *)key value:(NSObject *)value classInfo:(ESClassInfo *)classInfo{
-    NSString *typeStr = @"String?";
+    NSString *typeStr = @"String";
     //判断大小写
     if ([ESUppercaseKeyWords containsObject:key] /*&& [ESJsonFormatSetting defaultSetting].uppercaseKeyWordForId*/) {
         key = [key uppercaseString];
     }
     if ([value isKindOfClass:[NSString class]]) {
-        return [NSString stringWithFormat:@"    var %@: %@",key,typeStr];
+        return [NSString stringWithFormat:@"    var %@: %@ = \"\"", key, typeStr];
     }else if([value isKindOfClass:[@(YES) class]]){
         typeStr = @"Bool";
-        return [NSString stringWithFormat:@"    var %@: %@ = false",key,typeStr];
+        return [NSString stringWithFormat:@"    var %@: %@ = false", key, typeStr];
     }else if([value isKindOfClass:[NSNumber class]]){
-        NSString *valueStr = [NSString stringWithFormat:@"%@",value];
+        NSString *valueStr = [NSString stringWithFormat:@"%@", value];
         if ([valueStr rangeOfString:@"."].location!=NSNotFound){
             typeStr = @"Double";
         }else{
             typeStr = @"Int";
         }
-        return [NSString stringWithFormat:@"    var %@: %@ = 0",key,typeStr];
+        return [NSString stringWithFormat:@"    var %@: %@ = 0", key, typeStr];
     }else if([value isKindOfClass:[NSArray class]]){
         ESClassInfo *childInfo = classInfo.propertyArrayDic[key];
         NSString *type = childInfo.className;
-        return [NSString stringWithFormat:@"    var %@: [%@]?",key,type==nil?@"String":type];
+        return [NSString stringWithFormat:@"    var %@: [%@] = [%@]()", key, type?:@"String", type?:@"String"];
     }else if ([value isKindOfClass:[NSDictionary class]]){
         ESClassInfo *childInfo = classInfo.propertyClassDic[key];
         typeStr = childInfo.className;
         if (!typeStr) {
             typeStr = [key capitalizedString];
         }
-        return [NSString stringWithFormat:@"    var %@: %@?",key,typeStr];
+        return [NSString stringWithFormat:@"    var %@: %@ = %@()", key, typeStr, typeStr];
     }
-    return [NSString stringWithFormat:@"    var %@: %@",key,typeStr];
+    return [NSString stringWithFormat:@"    var %@: %@ = \"\"", key, typeStr];
 }
 
 + (NSString *)parseClassHeaderContentWithClassInfo:(ESClassInfo *)classInfo{
@@ -173,7 +173,15 @@
  *  atreturn
  */
 + (NSString *)parseClassContentForSwiftWithClassInfo:(ESClassInfo *)classInfo{
-    NSMutableString *result = [NSMutableString stringWithFormat:@"class %@: NSObject {\n\n",classInfo.className];
+    
+    NSArray *pathes = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [pathes.firstObject stringByAppendingPathComponent:@"SuperClass.txt"];
+    NSString *superClass = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    if (superClass.length == 0) {
+        superClass = @"NSObject";
+    }
+    
+    NSMutableString *result = [NSMutableString stringWithFormat:@"class %@: %@ {\n\n",classInfo.className, superClass];
     [result appendString:classInfo.propertyContent];
     [result appendString:@"\n}"];
     return [result copy];
