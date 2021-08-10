@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A75B74E26C28ABC00546BC7 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A75B74D26C28ABC00546BC7 /* XcodeKit.framework */; };
+		5A75B74F26C28ABC00546BC7 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A75B74D26C28ABC00546BC7 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B021A12F1DB9BC1F00E70393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A12E1DB9BC1F00E70393 /* AppDelegate.m */; };
 		B021A1321DB9BC1F00E70393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B021A1311DB9BC1F00E70393 /* main.m */; };
 		B021A1341DB9BC1F00E70393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B021A1331DB9BC1F00E70393 /* Assets.xcassets */; };
@@ -30,6 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5A75B75026C28ABC00546BC7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A75B74F26C28ABC00546BC7 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B021A1561DB9BC7C00E70393 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +59,7 @@
 /* Begin PBXFileReference section */
 		5A626E7120EB23FD0075E6C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		5A626E7520EB25200075E6C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		5A75B74D26C28ABC00546BC7 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		B021A12A1DB9BC1F00E70393 /* Json2Property.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Json2Property.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B021A12D1DB9BC1F00E70393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B021A12E1DB9BC1F00E70393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B021A1451DB9BC7B00E70393 /* Cocoa.framework in Frameworks */,
+				5A75B74E26C28ABC00546BC7 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +144,7 @@
 		B021A1431DB9BC7B00E70393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A75B74D26C28ABC00546BC7 /* XcodeKit.framework */,
 				B021A1441DB9BC7B00E70393 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -196,6 +212,7 @@
 				B021A13E1DB9BC7B00E70393 /* Sources */,
 				B021A13F1DB9BC7B00E70393 /* Frameworks */,
 				B021A1401DB9BC7B00E70393 /* Resources */,
+				5A75B75026C28ABC00546BC7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,12 +234,12 @@
 				TargetAttributes = {
 					B021A1291DB9BC1F00E70393 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8975PEGCVX;
+						DevelopmentTeam = 5Q4AG89742;
 						ProvisioningStyle = Automatic;
 					};
 					B021A1411DB9BC7B00E70393 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8975PEGCVX;
+						DevelopmentTeam = 5Q4AG89742;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -232,8 +249,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B021A1211DB9BC1F00E70393;
 			productRefGroup = B021A12B1DB9BC1F00E70393 /* Products */;
@@ -405,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8975PEGCVX;
+				DEVELOPMENT_TEAM = 5Q4AG89742;
 				INFOPLIST_FILE = Json2Property/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -420,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8975PEGCVX;
+				DEVELOPMENT_TEAM = 5Q4AG89742;
 				INFOPLIST_FILE = Json2Property/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -435,7 +454,7 @@
 				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8975PEGCVX;
+				DEVELOPMENT_TEAM = 5Q4AG89742;
 				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -451,7 +470,7 @@
 				CODE_SIGN_ENTITLEMENTS = Json2PropertyExtension/Json2PropertyExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8975PEGCVX;
+				DEVELOPMENT_TEAM = 5Q4AG89742;
 				INFOPLIST_FILE = Json2PropertyExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
